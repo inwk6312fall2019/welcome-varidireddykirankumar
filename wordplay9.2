@@ -1,0 +1,14 @@
+file = open('kiran.txt')
+def has_no_e(word):
+    for char in word:
+        if char in 'Ee':
+            return False
+    return True  
+
+count = 0
+for line in file:
+    word = line.strip()
+    if has_no_e(word):
+        count += 1
+        print (word)
+       
