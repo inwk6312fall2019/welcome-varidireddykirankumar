@@ -1,0 +1,14 @@
+file = open('kiran.txt')
+def avoids(words,letters):
+    for char in words:
+        if char in letters:
+            return False
+    return True
+letters = input('What letters to exclude? ')
+count = 0
+for line in file:
+    words = line.strip()
+    if avoids(words, letters):
+        count += 1
+        print (words)
+      
